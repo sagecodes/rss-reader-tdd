@@ -16,7 +16,7 @@ In this project you are given a web-based application that reads RSS feeds. The 
 - When complete - all of your tests should pass.
 
 ## Live demo
-[http://sageio.github.io/rss-reader-tdd/](rss-reader-tdd)
+[http://sageio.github.io/rss-reader-tdd/](http://sageio.github.io/rss-reader-tdd/)
 
 
 ##Resources used:
