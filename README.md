@@ -12,3 +12,4 @@ Loops in Jasmine http://tosbourn.com/using-loops-in-jasmine/
 Jasmine cheat sheet http://www.cheatography.com/citguy/cheat-sheets/jasmine-js-testing/
 jasmine docs & tutorial http://jasmine.github.io/2.3/introduction.html
 Treehouse.com Javascript track
+testing DOM with Jasmine http://www.htmlgoodies.com/beyond/javascript/js-ref/testing-dom-events-using-jquery-and-jasmine-2.0.html
