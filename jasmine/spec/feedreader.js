@@ -1,7 +1,9 @@
 /* feedreader.js
-
+    ####################################################
     Please note that commenting is at a minimum because
     the tests should be readable.
+    Last reviewer suggested comment clean up
+    ####################################################
  */
 $(function() {
 
@@ -45,7 +47,6 @@ $(function() {
         });
     });
 
-
     describe('Initial Entries', function() {
 
          //Create before each with done to perform asynchronous test
@@ -66,8 +67,6 @@ $(function() {
     describe('New Feed Selection', function() {
         var feed;
         var newFeed;
-
-
 
         //Create before each with done to perform asynchronous test
         beforeEach(function(done) {
