@@ -97,23 +97,42 @@ $(function() {
             loadFeed(0, function() {
                 done();
             });
-        });
 
+        });
         // pass done in and call at end to let test know about asynchronous
-        // test that entry does not = 0
-        it('.has initial entries ', function(done){
+        // check that entries is not empty
+        it('has initial entries ', function(done){
             expect($('.entry').length).not.toBe(0);
             done();
         });
     });
 
     /* TODO: Write a new test suite named "New Feed Selection"*/
-    describe('New Feed Selection', function() {
-
+        describe('New Feed Selection', function() {
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-    });
+        var feed;
+        var newFeed;
+        // store current entries in variable feed
+        feed = $('.entry');
 
+        //Create before each with done to perform asynchronous test
+        // store new loaded entries in variable newFeed
+        beforeEach(function(done) {
+            loadFeed(0, function() {
+                newFeed = $('.entry');
+                done();
+            });
+        });
+
+        // pass done in and call at end to let test know about asynchronous
+        // check that last feed(feed) entries does not equal newFeed entries
+        // can use any unique values for comparison instead
+        it('content changes', function(done) {
+            expect((feed == newFeed)).toBe(false);
+            done();
+        });
+    });
 }());
