@@ -49,7 +49,7 @@ $(function() {
 
     describe('Initial Entries', function() {
 
-         //Create before each with done to perform asynchronous test
+         //Create before each with done to perform asynchronous test on feed 0
          beforeEach(function(done) {
             loadFeed(0, function() {
                 done();
@@ -68,7 +68,7 @@ $(function() {
         var feed;
         var newFeed;
 
-        //Create before each with done to perform asynchronous test
+        //Create before each with done to perform asynchronous fetch from feed 0
         beforeEach(function(done) {
             loadFeed(0, function() {
                 // store entries for feed 0
@@ -77,6 +77,7 @@ $(function() {
             });
         });
 
+        //Create before each with done to perform asynchronous fetch from feed 1
         beforeEach(function(done) {
             loadFeed(1, function() {
                     // store new loaded entries(feed1)
