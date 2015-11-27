@@ -68,6 +68,8 @@ $(function() {
         var feed;
         var newFeed;
 
+
+
         //Create before each with done to perform asynchronous fetch from feed 0
         beforeEach(function(done) {
             loadFeed(0, function() {
@@ -78,20 +80,15 @@ $(function() {
         });
 
         //Create before each with done to perform asynchronous fetch from feed 1
-        beforeEach(function(done) {
-            loadFeed(1, function() {
-                    // store new loaded entries(feed1)
-                    newFeed = $('.feed').html();
-                    done();
-                });
-            });
+
 
         // check that last feed(feed) entries does not equal newFeed entries
         it('has new content when new feed loaded', function(done) {
-            console.log('feed = ' + feed);
-            console.log('newFeed = ' + newFeed);
-            expect(feed).not.toEqual(newFeed);
-            done();
+            loadFeed(1, function() {
+                newFeed = $('.feed').html();
+                expect(feed).not.toEqual(newFeed);
+                done();
+            })
         });
     });
 }());
